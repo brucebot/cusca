@@ -24,30 +24,29 @@
                 </header>
 
                 <section class="post-content">
+                  <section class="google-ad">
+        <p>
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- responsive -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4124873028623523"
+       data-ad-slot="2617039194"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+    </p>
+        <br>
+      </section>
                     {{content}}
                 </section>
-
+                <center><h3>智造师小密圈</h3></center><center><p>Meet some of the people behind the new manufacturing revolution<br>
+                与那些在智能制造新革命背后的人交流</p></center>
+                        <p><center><img src="/content/images/2017/08/IMG_9981.JPG" alt="" height=30%, width=30%></center> </p>
                 <footer class="post-footer">
-                    <section class="share">
-                        <p>Share this post: <br/>
-                            <a class="share-icon icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-                               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="share-icon icon-facebook"
-                               href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                               onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a class="share-icon icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a class="share-icon icon-reddit" href="https://www.reddit.com/submit?url={{url absolute="true"}}"
-                               onclick="window.open(this.href, 'reddit-share', 'width=850,height=530');return false;">
-                                <i class="fa fa-reddit-alien"></i>
-                            </a>
-                        </p>
+                    <section class="share">                      
+                      {{> "social_share"}}
                     </section>
 
                 </footer>
@@ -92,7 +91,7 @@
                 (function() { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
                     s.async = true;
-                    s.src = 'https://[your-disqus-name].disqus.com/embed.js';
+                    s.src = 'https://brucebot.disqus.com/embed.js';
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();

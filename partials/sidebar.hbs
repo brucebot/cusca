@@ -1,5 +1,5 @@
 <div class="widget">
-    <h4 class="widget-title">Featured Posts</h4>
+    <h4 class="widget-title">推荐文章</h4>
     <div class="widget-content">
         {{#get "posts" filter="featured:true" limit="8" as |featured|}}
             {{> "featured_posts" sidebarTitle="Featured Posts" sidebarPosts=featured}}
@@ -8,14 +8,14 @@
 </div>
 
 <div class="widget">
-    <h4 class="widget-title">Tags</h4>
+    <h4 class="widget-title">标签</h4>
     <div class="widget-content">
         <ul class="menu" id="tag-list">
             {{#get "tags" limit="all" order="name asc"}}
                 {{#foreach tags}}
                     <li><a class="tag" href="{{url}}">{{name}}</a></li>
                 {{else}}
-                    <li>There are not</li>
+                    <li>标签未找到</li>
                 {{/foreach}}
             {{/get}}
         </ul>
@@ -25,12 +25,12 @@
 {{!-- Email subscribe form --}}
 {{#if @labs.subscribers}}
     <div class="widget">
-        <h4 class="widget-title">Subscribe</h4>
+        <h4 class="widget-title">订阅</h4>
         <div class="widget-content widget-subscribe">
-            <p>Get the latest posts delivered right to your inbox.</p>
-            {{subscribe_form placeholder="Your email address" form_class="subscribe-form"}}
-            <p>or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/"> <strong>via RSS</strong>
-            </a> with Feedly!</p>
+            <p>输入邮件订阅后可以及时的收到新文章的提醒</p>
+            {{subscribe_form placeholder="您的邮件地址" form_class="subscribe-form"}}
+            <p>或者使用<storng>Feedly</strong><strong>订阅RSS</strong> <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">
+            </a></p>
         </div>
     </div>
 {{/if}}
