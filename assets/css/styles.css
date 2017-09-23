@@ -6653,34 +6653,31 @@ pre.line-numbers {
       @media print, screen and (min-width: 48em) {
         #header .social-media li {
           float: left; } }
-a.weixin {
-    position: relative;
-}
-
-.weixin img {
+/*微信二维码*/
+ a.weixin{
+   position:relative;
+ }
+.weixin::after{
+  content: url(/content/images/qianyongme_qrcode.jpg);
   position: absolute;
-  z-index: 99;
-  top: -135px;
   right: -28px;
-  width: 7.5rem;
-  max-width: none;
-  height: 7.5rem;
-  transform: scale(0);
+  top: -135px;
+  z-index: 99;
+  width:120px;
+  height: 120px;
+  border: 5px solid #0095ba;
+  border-radius: 4px;
   transform-origin: top right;
+  transform: scale(0);
   opacity: 0;
-  border: .3125rem solid #0085ba;
-  border-radius: .25rem;
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-
 }
-
-.weixin:hover img {
-    transform: scale(1);
-    opacity: 1;
+.weixin:hover::after{
+  transform:scale(1);
+  opacity: 1;
 }
-
 .primary-header {
   text-align: center;
   border-bottom: 1px solid #D9D9D9;
