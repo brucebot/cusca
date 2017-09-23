@@ -6642,6 +6642,8 @@ pre.line-numbers {
       color: #FCC163; }
     #header .social-media .nd-social-linkedin a:hover {
       color: #FCC163; }
+      #header .social-media .nd-social-wechat a:hover {
+        color: #FCC163; }
     #header .social-media .nd-social-rss a:hover {
       color: #FCC163; }
     #header .social-media li {
@@ -6651,6 +6653,33 @@ pre.line-numbers {
       @media print, screen and (min-width: 48em) {
         #header .social-media li {
           float: left; } }
+a.weixin {
+    position: relative;
+}
+
+.weixin img {
+  position: absolute;
+  z-index: 99;
+  top: -135px;
+  right: -28px;
+  width: 7.5rem;
+  max-width: none;
+  height: 7.5rem;
+  transform: scale(0);
+  transform-origin: top right;
+  opacity: 0;
+  border: .3125rem solid #0085ba;
+  border-radius: .25rem;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+}
+
+.weixin:hover img {
+    transform: scale(1);
+    opacity: 1;
+}
 
 .primary-header {
   text-align: center;
